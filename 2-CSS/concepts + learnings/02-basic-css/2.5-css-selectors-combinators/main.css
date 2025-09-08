@@ -1,0 +1,39 @@
+
+body {
+    font-family: "Montserrat", sans-serif;
+}
+
+#product-overview {
+    background: #ff1b68;
+}
+
+/* Combinators: Apply below style to all h1 inside the element having id="product-overview" */
+#product-overview h1 {
+    color: #4cff1b;
+    font-family: "Anton", sans-serif;
+}
+
+/* This element selector will be ignored compared to above Combinator */
+h1 {
+    color: #7b21c1;
+    font-family: sans-serif;
+}
+
+/* This class selector will be ignored compared to above Combinator */
+.section-world {
+    color: #4457ff;
+}
+
+#plans h1 {
+    color: #ffbe1b;
+    font-family: inherit
+}
+
+/* Class selector */
+.section-title {
+    color: #2ddf5c;
+    /*font-family: inherit;*/
+}
+
+
+
