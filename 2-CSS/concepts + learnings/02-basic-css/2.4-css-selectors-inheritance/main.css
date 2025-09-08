@@ -1,0 +1,33 @@
+/* If we select style on body,
+    the same style will be inherited by all the child elements */
+body {
+    font-family: "Montserrat", sans-serif;
+}
+
+/* Id selector */
+#product-overview {
+    background: #ff1b68;
+}
+
+/* Element selector */
+section {
+    background: #4457ff;
+}
+
+/* Element selector */
+h1 {
+    color: white;
+    font-family: "Anton", sans-serif;
+}
+
+/* Class selector */
+.section-title {
+    color: #2ddf5c;
+}
+
+/* Element selector */
+h1 {
+    font-family: sans-serif;
+}
+
+
