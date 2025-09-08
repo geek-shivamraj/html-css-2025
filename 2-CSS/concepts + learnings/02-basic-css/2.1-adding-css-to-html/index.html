@@ -1,0 +1,41 @@
+<!--
+    Priority Order: Inline Style > External CSS File (Recommended) > style element selector
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>uHost</title>
+    <link href="favicon.png" rel="shortcut icon">
+
+    <!-- Way 2: This is Selector style as we use <style> element
+       & define the style for specific element -->
+    <style>
+        section {
+            background: #ff1b68;
+        }
+    </style>
+
+    <!-- Way 3: Using <link> element to refer the external css file -->
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <main>
+        <!-- Way 1: This is inline style as we use "style" attribute -->
+        <section style="background: #32ff1b;">
+            <h1>Get the freedom you deserve.</h1>
+        </section>
+
+        <section>
+            <h1>Get the freedom you deserve.</h1>
+        </section>
+        <section>
+            <h1>Choose your Plan.</h1>
+        </section>
+    </main>
+</body>
+</html>
+
+
