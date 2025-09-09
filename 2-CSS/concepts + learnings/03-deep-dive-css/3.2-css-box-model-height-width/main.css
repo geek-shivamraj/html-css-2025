@@ -1,0 +1,27 @@
+body {
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+}
+
+/* Increasing size of main container to see the height visual effect */
+main {
+    height: 500px;
+}
+
+/* width & height can be in % or px */
+#product-overview {
+    background: #ff1b68;
+    width: 75%;
+    height: 528px;
+}
+
+.section-title {
+    color: #2ddf5c;
+}
+
+#product-overview h1 {
+    color: white;
+    font-family: "Anton", sans-serif;
+}
+
+
