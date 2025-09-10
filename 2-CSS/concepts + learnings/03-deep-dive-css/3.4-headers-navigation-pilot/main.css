@@ -1,0 +1,47 @@
+
+/* Universal selector:
+    - By using this, we're setting box-sizing as border-box for all the elements.
+    - This will overwrite Inheritance or browser defaults
+
+   content-box
+    - Default value for box-sizing
+   border-box
+    - Recommended value for box-sizing
+    - The set value of width & height will include content + padding + border
+    - Browser will automatically adjust.
+*/
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+}
+
+/* Increasing size of main container to see the height visual effect */
+main {
+    height: 500px;
+}
+
+/* width & height can be in % or px */
+#product-overview {
+    background: #ff1b68;
+    width: 100%;
+    height: 528px;
+    padding: 10px;
+    border: 5px solid black;
+    /*margin: 10px*/
+    /*box-sizing: border-box;*/
+}
+
+.section-title {
+    color: #2ddf5c;
+}
+
+#product-overview h1 {
+    color: white;
+    font-family: "Anton", sans-serif;
+}
+
+
