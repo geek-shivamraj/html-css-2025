@@ -1,0 +1,33 @@
+body {
+    font-family: sans-serif;
+}
+
+nav {
+    margin-bottom: 16px;
+    background: #fa923f;
+    padding: 8px 0;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    margin: 10px;
+}
+
+/* New Selector */
+/* this will target all anchor tags with active class */
+a.active {
+    color: purple;
+}
+
+.main-section {
+    height: 800px;
+    border: 2px solid #ccc;
+    padding: 16px;
+}
+
+/* Specificity Comes into pic for 1st section */
+.highlighted {
+    border: 5px solid #fa923f;
+}
+

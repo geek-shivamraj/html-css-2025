@@ -1,0 +1,33 @@
+body {
+    font-family: sans-serif;
+}
+
+nav {
+    margin-bottom: 16px;
+    background: #fa923f;
+    padding: 8px 0;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    margin: 10px;
+}
+
+a.active {
+    color: purple;
+}
+
+/* !important annotation will overwrite specifity */
+/* Not Recommended */
+.main-section {
+    height: 200px;
+    border: 2px solid #ccc !important;
+    padding: 16px;
+}
+
+/* Here border property will be overwritten with above */
+.highlighted {
+    border: 5px solid #fa923f;
+}
+
