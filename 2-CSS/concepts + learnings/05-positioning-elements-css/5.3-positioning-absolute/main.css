@@ -1,0 +1,47 @@
+
+html {
+    background: #9f9898;
+    padding: 15px;
+    border: 5px solid white;
+    margin: 15px;
+    height: 2000px;
+}
+
+body {
+    background: #fa923f;
+    padding: 20px;
+    border: 5px solid black;
+    margin: 0;
+}
+
+.parent {
+    background: white;
+    padding: 20px;
+    border: 5px solid black;
+    margin: 0;
+}
+
+.parent div {
+    background: rgb(105, 105, 109);
+    color: white;
+    padding: 10px;
+    border: 5px solid black;
+    margin: 10px;
+}
+
+/*
+1. The element will be removed from the normal document flow & no space is created for the element in the page layout.
+2. For absolute position element, the positioning context always depends & is defined based on 2 cases:
+	- Case 1: (Applied Here) If none of the ancestors (parent elements) has a "position" property applied,
+	    then the positioning context of the element is simply the HTML element.
+    - Case 2: If we've any ancestor with a "position" property applied, then the closest ancestor (parent elements)
+        with the "position" property will be the positioning context for the HTML element.
+3. Its final position is determined by the values of top, right, bottom & left.
+4. Better to define this, in conjunction with position: relative
+*/
+#child-2 {
+    position: absolute;
+    top: 300px;
+    left: 100px;
+}
+
