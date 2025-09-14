@@ -1,0 +1,49 @@
+
+html {
+    background: #9f9898;
+    padding: 15px;
+    border: 5px solid white;
+    margin: 15px;
+    height: 2000px;
+}
+
+body {
+    background: #fa923f;
+    padding: 20px;
+    border: 5px solid black;
+    margin: 0;
+}
+
+.parent {
+    background: white;
+    padding: 20px;
+    border: 5px solid black;
+    margin: 0;
+}
+
+.parent div {
+    background: rgb(105, 105, 109);
+    color: white;
+    padding: 10px;
+    border: 5px solid black;
+    margin: 10px;
+}
+
+/*
+    1. By applying position: fixed, it seems that the element has become inline but it's not the case,
+        we can still apply width to it. This will actually behave like an inline-block element.
+
+    2. This element will have viewport as positioning context. To view this, you can add bottom, left, right as well.
+
+    3. We can apply the positioning property no matter it's inline or block.
+*/
+#child-2 {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    margin: 0;
+    /* box-sizing is added to fix the border-right */
+    box-sizing: border-box;
+}
+

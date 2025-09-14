@@ -1,0 +1,109 @@
+main {
+    padding-top: 32px;
+}
+
+.background {
+    /* Adding background image to the packages page */
+    background: url("../images/plans-background.png");
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    /* Adding z-index: -1 will put the image below the packages */
+    z-index: -1;
+}
+
+.package {
+    width: 80%;
+    margin: 16px 0;
+    border: 4px solid #0e4f1f;
+    border-left: none;
+    /* Adding here so that the badge element will be position relative to the package */
+    position: relative;
+}
+
+.package:hover,
+.package:active {
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    border-color: #ff5454;
+}
+
+.package a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    padding: 32px;
+}
+
+/* Here we will use position: */
+.package__badge {
+    /* This will pull out the badge HTML element */
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 20px;
+    font-size: 12px;
+    color: white;
+    background: #ff5454;
+    padding: 8px;
+}
+
+.package__subtitle {
+    color: #979797;
+}
+
+.package__info {
+    padding: 16px;
+    border: 1px solid #0e4f1f;
+    font-size: 20px;
+    color: #0e4f1f;
+    background: white;
+}
+
+/* Any element coming after this class div will not respect previous float */
+.clearfix {
+    clear: both;
+}
+
+#plus {
+    background: rgba(213, 255, 220, 0.95);
+}
+
+#free {
+    background: rgba(234, 252, 237, 0.95);
+    /* Not Recommended to use */
+    /* It's great for positioning image in text and make sure that
+        text actually flows around the image */
+    /* It's not as great for positioning block level elements
+        becoz the text will respond to it but other block elements won't */
+    float: right;
+    /* Solution to above:
+        - We have to basically keep its space reserved & tell the other block level
+            elements that comes after it that they shouldn't respect any previous floatings
+        - We can do this via a little hack i.e, clearfix (check above)
+        - Add additional helper div after the free plan section to clear the float fix.
+
+        Best Solution: Use Flexbox
+    */
+    border-right: none;
+    border-left: 4px solid #0e4f1f;
+    text-align: right;
+}
+
+/* Hover problem comes into the pic becoz of specificity of #free
+    - Clean fix for border-left of free plan hover */
+#free:hover,
+#free:active {
+    border-left-color: #ff5454;
+}
+
+#premium {
+    background: rgba(14, 79, 31, 0.95);
+}
+
+#premium .package__title {
+    color: white;
+}
+
+#premium .package__subtitle {
+    color: #bbb;
+}

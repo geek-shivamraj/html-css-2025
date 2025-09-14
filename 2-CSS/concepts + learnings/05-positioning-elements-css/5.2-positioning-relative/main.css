@@ -1,0 +1,60 @@
+
+html {
+    background: #9f9898;
+    padding: 15px;
+    border: 5px solid white;
+    margin: 15px;
+    height: 2000px;
+}
+
+body {
+    background: #fa923f;
+    padding: 20px;
+    border: 5px solid black;
+    margin: 0;
+}
+
+.parent {
+    background: white;
+    padding: 20px;
+    border: 5px solid black;
+    margin: 0;
+    /* Useful in case we want to hide the element if it moves out of the parent container */
+    overflow: hidden;
+}
+
+.parent div {
+    background: rgb(105, 105, 109);
+    color: white;
+    padding: 10px;
+    border: 5px solid black;
+    margin: 10px;
+}
+
+/*
+1. The element will be positioned according to the normal document flow and then offset relative
+    to itself based on the values of top, right, bottom, left.
+
+2. The offset doesn't affect the position of any other elements; thus the space given for the element
+    in the page layout is the same if position were static.
+
+3. The positioning context here is the element itself & the element will not be taken out of the document flow.
+
+4. If we increase the top & the elements moves outside of the parent body. We can use overflow: hidden to hide
+    the element if it cross the parent container.
+*/
+#child-2 {
+    position: relative;
+    top: 10px;
+    left: 30px;
+}
+
+/*
+  - This element will be hidden as the element has moved out of the parent container.
+  - As parent container (package) has overflow as hidden.
+*/
+#child-3 {
+    position: relative;
+    top: 150px;
+}
+

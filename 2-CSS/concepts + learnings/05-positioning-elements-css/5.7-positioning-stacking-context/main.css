@@ -1,0 +1,98 @@
+/*
+    1. navigation element is part of navigation stacking context.
+    2. headline element is part of headline stacking context.
+        - image-1, 2, 3 are part of headline stacking context.
+    3. contact-us element is part of contact-us stacking context.
+
+    Extract: The element who will come over each other depends on the higher value of z-index at same level of stacking context.
+
+*/
+
+
+html {
+    background: #b3b3b3;
+    padding: 15px;
+    border: 5px solid white;
+    margin: 15px;
+    height: 2000px;
+}
+
+body {
+    background: white;
+    padding: 20px;
+    border: 5px solid black;
+    margin: 0;
+    height: 400px;
+}
+
+.navigation, .headline, .contact-us {
+    padding: 20px;
+    border: 5px solid black;
+    margin: 10px;
+    /* All the navigation, headline & contact-us elements are defined with position: fixed */
+    /* By default, z-index is auto or zero right now. */
+    position: fixed;
+}
+
+.headline div {
+    background: rgb(105, 105, 109);
+    color: white;
+    padding: 10px;
+    border: 5px solid black;
+    margin: 10px;
+    width: 130px;
+}
+
+.navigation {
+    background: rgb(255, 109, 109);
+    top: 100px;
+    left: 100px;
+    width: 300px;
+}
+
+/* Step 2: Updating z-index as 1 i.e., headline will be over all the elements */
+.headline {
+    background: rgb(77, 77, 248);
+    top: 150px;
+    left: 150px;
+    width: 270px;
+    height: 200px;
+    /* Step 8: Update the z-index greater than headline */
+    z-index: 200;
+}
+
+/* Step 4: Updating z-index as 100 */
+.contact-us {
+    background: rgb(69, 214, 69);
+    top: 180px;
+    left: 320px;
+    width: 180px;
+    z-index: 100;
+}
+
+/* Step 3: Stacking context comes into the pic when we play with these image-1, 2, & 3 i.e., children*/
+.image-1 {
+    top: 200px;
+    left: 230px;
+    /* Step 5: Applying position: fixed to all child */
+    position: fixed;
+}
+
+.image-2 {
+    top: 230px;
+    left: 260px;
+    /* Step 5: Applying position: fixed to all child */
+    position: fixed;
+    /* Step 6: Now image-2 will be on top of all 3 images */
+    /* Step 7: Let's make this z-index value higher than z-index value of contact-us
+        - There will be no impact i.e., image-2 will not come over contact-us element as it's image-2's parent sibling.
+        - If we want image-2 to come over contact-us, then first image-2's parent i.e., headline should get greater z-index than contact-us */
+    z-index: 1000;
+}
+
+.image-3 {
+    top: 260px;
+    left: 300px;
+    /* Step 5: Applying position: fixed to all child */
+    position: fixed;
+}
