@@ -1,0 +1,151 @@
+#product-overview {
+    background: url("images/freedom.png");
+    width: 100%;
+    height: 528px;
+    padding: 10px;
+    /* Instruction 1:
+        - Go to our landing page in the course project
+        - Add a "margin-top" to our image (#product-overview) to ensure,
+            that both the image & the slogan (Get the freedom you deserve)
+            are no longer hidden below the navigation bar.
+    */
+    margin-top: 43px; /* 43px is selected becoz of the nav height */
+    /* Instruction 3:
+        - Change the positioning context of the slogan
+        - (challenge: what was the positioning context so far? What is the new positioning context?)
+            Remember how we created the badge on the "Packages" page.
+    */
+    position: relative;
+}
+
+#product-overview h1 {
+    color: white;
+    font-family: "Anton", sans-serif;
+    /* Instruction 2:
+        - Find a way to position the slogan in the left lower corner of the image using "px".
+        - The Slogan should have some space to the left & to the bottom but
+            don't add margin to it.
+    */
+    /* The positioning context is right now the <html> element */
+    position: absolute;
+    /* Will be counted from bottom. So, for now let's get with top & left */
+    /*bottom: 40px;*/
+    /*top: 450px;*/
+    /*left: 60px;*/
+
+    /* Since we've have position: relative to h1 parent, now the positioning context of h1
+       has changed from html element to product overview.
+        - Now we can use bottom: 0 or top: 0 as well.
+       */
+    bottom: 10px;
+    left: 50px;
+
+    /* Instruction 4:
+       - Adjust the position of the slogan using % values
+    */
+    bottom: 5%;
+    left: 3%;
+}
+
+.section-title {
+    color: #2ddf5c;
+    text-align: center;
+}
+
+/* Centering the recommended plans horizontally */
+.plans__list {
+    width: 80%;
+    margin: auto;
+    /* To center the inner content */
+    text-align: center;
+}
+
+.plan {
+    display: inline-block;
+    background-color: #d5ffdc;
+    padding: 16px;
+    margin: 8px;
+    width: 30%;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.plan--highlighted {
+    background: #19b84c;
+    color: white;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.plan__annotation {
+    background: white;
+    color: #19b84c;
+    padding: 8px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.plan__title {
+    color: #0e4f1f;
+}
+
+.plan__price {
+    color: #858585;
+}
+
+.plan--highlighted .plan__title {
+    color: white;
+}
+
+.plan--highlighted .plan__price {
+    color: #0e4f1f;
+}
+
+.plan__features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.plan__feature {
+    margin: 8px 0;
+}
+
+#key-features {
+    background: #ef4747;
+    margin-top: 80px;
+    padding: 16px;
+}
+
+#key-features .section-title {
+    color: white;
+    margin: 32px;
+}
+
+.key-feature__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.key-feature {
+    display: inline-block;
+    width: 30%;
+    vertical-align: top;
+}
+
+.key-feature__image {
+    background: #ffcede;
+    width: 128px;
+    height: 128px;
+    border: 2px solid #424242;
+    border-radius: 50%;
+    margin: auto;
+}
+
+.key-feature__description {
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+}
