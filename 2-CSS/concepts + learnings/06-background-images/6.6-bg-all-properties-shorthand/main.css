@@ -1,0 +1,169 @@
+
+
+#product-overview {
+    background-image: url("images/freedom.jpg");
+    background-size: cover;
+    background-position: left 10% bottom 20%;
+    background-repeat: no-repeat;
+    /* Adding border temporarily to understand the origin-clip
+        - We will see on left & right, there is whitespace beneath the border and
+            on the top & bottom, we see the image.
+        - Reason:
+            - On left & right, image is fit into the container & the border is not the part of container width
+            - On top & bottom, the border is also not part of container, we actually have excess space on our image
+                so, we crop it & that in turn seems to happen after the border.
+        - This exactly we can control with property: background-origin
+        - Default value of background-origin: padding-box (in this case)
+        - padding-box means container will include the image & padding but not border
+    */
+    border: 5px dashed red;
+
+    /*
+        We will get some whitespace inside of our image becoz we got the padding on left, right, top & bottom.
+        - context-box means the container will include only image without border & padding.
+    */
+    background-origin: content-box;
+    /*
+        The image will go beneath the border on left & right becoz we now basically define what the container is for
+            our background property.
+        -  border-box means the container will include the image, padding & border.
+    */
+    background-origin: border-box;
+
+    /* Defines whether the background extends underneath border
+        - with this, we define where the image actually should be clipped if necessary
+        - it basically overwrites background origin
+    */
+    /* The image will be clipped before the padding */
+    background-clip: content-box;
+
+    /* The image will be clipped at the padding */
+    background-clip: padding-box;
+
+    /* The image will be clipped at the border */
+    background-clip: border-box;
+
+    /* Rarely used property
+        - With that we can define how the scrolling would behave in a container that has background image
+        - Values can be fixed, scroll or local
+        - local: defines whether the image scrolls with the other content of the container.
+        - scroll: image would stay in place & the content would scroll over it.
+        - fix: the image wouldn't be fixed to the container but to the viewport.
+    */
+    /*background-attachment: local;*/
+    width: 100%;
+    height: 528px;
+    padding: 10px;
+    margin-top: 43px;
+    position: relative;
+
+}
+
+.section-title {
+    color: #2ddf5c;
+    text-align: center;
+}
+
+#product-overview h1 {
+    color: white;
+    font-family: "Anton", sans-serif;
+    position: absolute;
+    bottom: 5%;
+    left: 3%;
+}
+
+.plans__list {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+
+.plan {
+    background-color: #d5ffdc;
+    text-align: center;
+    padding: 16px;
+    margin: 8px;
+    display: inline-block;
+    width: 30%;
+    vertical-align: middle;
+}
+
+.plan--highlighted {
+    background: #19b84c;
+    color: white;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.plan__annotation {
+    background: white;
+    color: #19b84c;
+    padding: 8px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.plan__title {
+    color: #0e4f1f;
+}
+
+.plan__price {
+    color: #858585;
+}
+
+.plan--highlighted .plan__title {
+    color: white;
+}
+
+.plan--highlighted .plan__price {
+    color: #0e4f1f;
+}
+
+.plan__features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.plan__feature {
+    margin: 8px 0;
+}
+
+#key-features {
+    background: #ef4747;
+    margin-top: 80px;
+    padding: 16px;
+}
+
+#key-features .section-title {
+    color: white;
+    margin: 32px;
+}
+
+.key-feature__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.key-feature {
+    display: inline-block;
+    width: 30%;
+    vertical-align: top;
+}
+
+.key-feature__image {
+    background: #ffcede;
+    width: 128px;
+    height: 128px;
+    border: 2px solid #424242;
+    border-radius: 50%;
+    margin: auto;
+}
+
+.key-feature__description {
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+}
