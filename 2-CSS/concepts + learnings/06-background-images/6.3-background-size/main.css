@@ -1,0 +1,153 @@
+
+
+#product-overview {
+    /*background: url("images/freedom.jpg");*/
+    /* For background image */
+    background-image: url("images/freedom.jpg");
+    /* For background color */
+    /*background-color: red;*/
+
+    /* Background size */
+
+    background-size: 300px;
+
+    background-size: 300px 100px;
+
+    background-size: 50%;
+
+    background-size: 100%;
+
+    background-size: 50% 100%;
+
+    /* We can see the image is not occupying the full content in this case
+        becoz the container happens to have a different aspect ratio in our app
+        - You would rarely have a perfect fit of container & image */
+    background-size: auto 100%;
+
+    /* Cover is a setting that will ensure that our image always fills the entire container,
+        it will even zoom in if our image is smaller than the container.
+    */
+    background-size: cover;
+
+    /*"contain" ensures that the full image is visible in the container i.e.,
+        image doesn't fill the entire container becoz "contain" doesn't make sure that
+        the entire container will be filled like "cover" rather it ensures that the entire image is rendered.
+    */
+    background-size: contain;
+
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 528px;
+    padding: 10px;
+    margin-top: 43px;
+    position: relative;
+}
+
+.section-title {
+    color: #2ddf5c;
+    text-align: center;
+}
+
+#product-overview h1 {
+    color: white;
+    font-family: "Anton", sans-serif;
+    position: absolute;
+    bottom: 5%;
+    left: 3%;
+}
+
+.plans__list {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+
+.plan {
+    background-color: #d5ffdc;
+    text-align: center;
+    padding: 16px;
+    margin: 8px;
+    display: inline-block;
+    width: 30%;
+    vertical-align: middle;
+}
+
+.plan--highlighted {
+    background: #19b84c;
+    color: white;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.plan__annotation {
+    background: white;
+    color: #19b84c;
+    padding: 8px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.plan__title {
+    color: #0e4f1f;
+}
+
+.plan__price {
+    color: #858585;
+}
+
+.plan--highlighted .plan__title {
+    color: white;
+}
+
+.plan--highlighted .plan__price {
+    color: #0e4f1f;
+}
+
+.plan__features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.plan__feature {
+    margin: 8px 0;
+}
+
+#key-features {
+    background: #ef4747;
+    margin-top: 80px;
+    padding: 16px;
+}
+
+#key-features .section-title {
+    color: white;
+    margin: 32px;
+}
+
+.key-feature__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.key-feature {
+    display: inline-block;
+    width: 30%;
+    vertical-align: top;
+}
+
+.key-feature__image {
+    background: #ffcede;
+    width: 128px;
+    height: 128px;
+    border: 2px solid #424242;
+    border-radius: 50%;
+    margin: auto;
+}
+
+.key-feature__description {
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+}
