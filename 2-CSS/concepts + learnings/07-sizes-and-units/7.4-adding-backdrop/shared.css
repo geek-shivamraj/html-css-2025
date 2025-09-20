@@ -1,0 +1,177 @@
+* {
+    box-sizing: border-box;
+}
+
+/*html {*/
+/*    height: 100%;*/
+/*}*/
+
+body {
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    /*height: 100%;*/
+}
+
+.backdrop {
+    /* Step 1: we add position: relative.
+        When we check the page, it will not show backdrop. Why ?
+        - The containing block here is the closest block ancestor i.e., body. We can check its width X height
+        - Now we can see the backdrop element, there will be width but not height i.e., 0 why ?
+        - Becoz the height is only defined by the content of our body but this info doesn't suffice to make this height 100%
+
+       Ways to solve this for using %age:
+        Solution 1: Add height to html & body tag - This will push other element down
+        Solution 2: Just change the position to absolute. then no need of html & body height
+    */
+    /*position: relative;*/
+
+    /*Step 2: Changing position from relative to absolute as solution 2
+        Question: Why this worked?
+         - When we use absolute position, then the conditional block would be the closest ancestor which has position different
+            from static, in our case: neither body nor html element has different position
+         - This case, the position:absolute leads to the same behaviour as position: fixed.
+         - this means the %age value here refers to the viewport as the containing block.
+         - We will have margin collapsing here.
+    */
+    /*position: absolute;*/
+
+    /* Step 3: Change the position to fixed. Though we still have margin collapsing
+        - Add top & left
+       Now backdrop is working fine. Though we will keep the backdrop hidden for now. Later we will use.
+    */
+    position: fixed;
+    top: 0;
+    left: 0;
+    /* Step 4: Keep backdrop hidden for now. Remove display: none to see the backdrop
+        Later lecture: Alternatively we will solve this via other units like vh, vw
+        - Later we will add JS to appearance/disappearance of backdrop dynamically.
+     */
+    display: none;
+
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.main-header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #2ddf5c;
+    padding: 8px 16px;
+    z-index: 1;
+}
+
+.main-header > div {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.main-header__brand {
+    color: #0e4f1f;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 22px;
+    display: inline-block;
+    height: 22px;
+}
+
+.main-header__brand img {
+    height: 100%;
+}
+
+.main-nav {
+    display: inline-block;
+    text-align: right;
+    width: calc(100% - 74px);
+    vertical-align: middle;
+}
+
+.main-nav__items {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.main-nav__item {
+    display: inline-block;
+    margin: 0 16px;
+}
+
+.main-nav__item a {
+    text-decoration: none;
+    color: #0e4f1f;
+    font-weight: bold;
+    padding: 3px 0;
+}
+
+.main-nav__item a:hover,
+.main-nav__item a:active {
+    color: white;
+    border-bottom: 5px white solid;
+}
+
+.main-nav__item--cta a {
+    color: white;
+    background: red;
+    padding: 8px 16px;
+    border-radius: 8px;
+}
+
+.main-nav__item--cta a:hover,
+.main-nav__item--cta a:active {
+    color: red;
+    background: white;
+    border: none;
+}
+
+.main-footer {
+    background: black;
+    padding: 32px;
+    margin-top: 48px;
+}
+
+.main-footer__links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.main-footer__link {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.main-footer__link a {
+    text-decoration: none;
+    color: white;
+}
+
+.main-footer__link a:hover,
+.main-footer__link a:active {
+    color: #ccc;
+}
+
+.button {
+    background: #0e4f1f;
+    color: white;
+    font: inherit;
+    border: 2px solid #0e4f1f;
+    padding: 8px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.button:hover,
+.button:active {
+    background: white;
+    color: #0e4f1f;
+}
+
+.button:focus {
+    outline: none;
+}
