@@ -1,0 +1,81 @@
+.testimonial {
+    font-size: 20px;
+    margin: 48px 0;
+}
+
+.testimonial__list {
+    width: 80%;
+    margin: auto;
+}
+
+.testimonial:first-of-type {
+    margin-top: 96px;
+}
+
+/*
+    Imp. Point to Note
+     - With the combination of width property in a %age value and max width defined
+        with a fixed value in px value, we can make sure that certain elements are not displayed
+        smaller or larger than intended by us.
+*/
+
+.testimonial__image-container {
+    /* Step 1: With this the image size increases & increase depending on the width of our device */
+    width: 65%;
+
+    /* Step 2: We can restrict the width to a maximum value by adding max-width */
+    max-width: 580px;
+
+    /* Step 3: We can restrict the width to a minimum value by adding min-width */
+    min-width: 350px;
+
+    display: inline-block;
+    vertical-align: middle;
+    box-shadow: 3px 3px 5px 3px rgba(0, 0, 0, 0.3);
+}
+
+.testimonial__image {
+    width: 100%;
+    vertical-align: top;
+}
+
+.testimonial__info {
+    text-align: right;
+    padding: 14px;
+    display: inline-block;
+    vertical-align: middle;
+    width: 20%
+}
+
+#customer-2.testimonial {
+    text-align: right;
+}
+
+#customer-2 .testimonial__info {
+    text-align: left;
+}
+
+.testimonial__name {
+    margin: 3px;
+    color: #ff5454
+}
+
+.testimonial__subtitle {
+    margin: 0;
+    font-size: 18px;
+    color: #ccc;
+}
+
+.testimonial__subtitle a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.testimonial__subtitle a:hover,
+.testimonial__subtitle a:active {
+    color: #7a7a7a;
+}
+
+.testimonial__text {
+    margin: 3px;
+}
