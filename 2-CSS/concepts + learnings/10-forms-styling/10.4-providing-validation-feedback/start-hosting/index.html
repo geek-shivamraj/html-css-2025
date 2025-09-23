@@ -5,19 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- Adding meta tag   -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>uHost Customers</title>
+    <title>uHost Signup</title>
     <link href="../images/favicon.png" rel="shortcut icon">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
     <link rel="stylesheet" href="../shared.css">
-    <link rel="stylesheet" href="customers.css">
+    <link rel="stylesheet" href="start-hosting.css">
 </head>
 
 <body>
-    <!-- Adding backdrop -->
     <div class="backdrop"></div>
     <header class="main-header">
         <div>
-            <!-- Adding Hamburger Menu  -->
             <button class="toggle-button">
                 <span class="toggle-button__bar"></span>
                 <span class="toggle-button__bar"></span>
@@ -33,10 +31,10 @@
                     <a href="../packages/index.html">Packages</a>
                 </li>
                 <li class="main-nav__item">
-                    <a href="index.html">Customers</a>
+                    <a href="../customers/index.html">Customers</a>
                 </li>
                 <li class="main-nav__item main-nav__item--cta">
-                    <a href="../start-hosting/index.html">Start Hosting</a>
+                    <a href="index.html">Start Hosting</a>
                 </li>
             </ul>
         </nav>
@@ -47,40 +45,39 @@
                 <a href="../packages/index.html">Packages</a>
             </li>
             <li class="mobile-nav__item">
-                <a href="index.html">Customers</a>
+                <a href="../customers/index.html">Customers</a>
             </li>
             <li class="mobile-nav__item mobile-nav__item--cta">
-                <a href="../start-hosting/index.html">Start Hosting</a>
+                <a href="index.html">Start Hosting</a>
             </li>
         </ul>
     </nav>
-    <main>
-        <div>
-            <div class="testimonial" id="customer-1">
-                <div class="testimonial__image-container">
-                    <img src="../images/customer-1.jpg" alt="Mike Statham - Customer" class="testimonial__image">
-                </div>
-                <div class="testimonial__info">
-                    <h1 class="testimonial__name">Mike Statham</h1>
-                    <h2 class="testimonial__subtitle">Founder of
-                        <a href="tech-analysis.com">tech-analysis.com</a>
-                    </h2>
-                    <p class="testimonial__text">uHost helped me realize my project with a high constrained budget in like no time.</p>
-                </div>
-            </div>
-            <div class="testimonial" id="customer-2">
-                <div class="testimonial__info">
-                    <h1 class="testimonial__name">John Mellow</h1>
-                    <h2 class="testimonial__subtitle">Hosts his private videos on uHost.</h2>
-                    <p class="testimonial__text">I worked as a blogger and always looked for an integrated hosting and
-                        file storage solutions. I found it in uHost!
-                    </p>
-                </div>
-                <div class="testimonial__image-container">
-                    <img src="../images/customer-2.jpg" alt="John Mellow - Customer"  class="testimonial__image">
-                </div>
-            </div>
-        </div>
+    <main class="signup-page">
+        <h1 class="signup-title">Awesome! Let's dive right in!</h1>
+        <form action="index.html" class="signup-form">
+            <label for="title">Title</label>
+<!--            <select id="title" class="invalid">-->
+            <select id="title">
+                <option value="mr">Mr.</option>
+                <option value="ms">Ms.</option>
+            </select>
+            <label for="first-name">First name</label>
+            <input id="first-name" type="text" required>
+            <label for="last-name">Last name</label>
+            <input id="last-name" type="text">
+            <label for="email">E-Mail</label>
+            <!-- Ideally based on backend or some Js these validation feedback should be configured -->
+<!--            <input id="email" type="email" class="invalid">-->
+            <input id="email" type="email">
+            <label for="password">Password</label>
+            <input id="password" type="password" required>
+<!--            <input type="checkbox" id="agree-terms" class="invalid">-->
+            <input type="checkbox" id="agree-terms" required>
+            <label for="agree-terms">Agree to
+                <a href="#">Terms & Conditions</a>
+            </label>
+            <button type="submit" class="button">Sign Up</button>
+        </form>
     </main>
     <footer class="main-footer">
         <nav>
