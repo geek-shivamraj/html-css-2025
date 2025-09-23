@@ -21,7 +21,7 @@
 /* E.g., below @media queries will be executed once both condn are met
     (min-height: 60rem), (orientation: portrait, landscape)
  */
-@media (min-width: 40rem) and (min-height: 60rem) {
+@media (min-width: 40rem) and (min-height: 40rem) {
 
     #product-overview {
         height: 40vh;
