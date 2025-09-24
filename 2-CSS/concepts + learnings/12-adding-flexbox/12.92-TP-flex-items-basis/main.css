@@ -1,0 +1,108 @@
+* {
+    box-sizing: border-box;
+    font-size: 1.5rem;
+}
+
+html {
+    background: #b3b3b3;
+    padding: 5px;
+}
+
+body {
+    background: #b3b3b3;
+    padding: 5px;
+    margin: 0;
+}
+
+.flex-container {
+    background: white;
+    padding: 10px;
+    border: 5px solid black;
+    height: 800px;
+    display: flex;
+    /* Step 1: flex direction is row i.e., main-axis is top-left to top-right */
+    /*flex-direction: row;*/
+
+    /* Step 4: flex direction is column i.e., main-axis is top-left to bottom-left */
+    flex-direction: column;
+
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.item-1 {
+    background: #ff7300;
+    color: white;
+    padding: 10px;
+    border: 5px solid black;
+    margin: 10px;
+}
+
+.item-2 {
+    background: #ff9640;
+    color: white;
+    padding: 10px;
+    border: 5px solid black;
+    margin: 10px;
+    width: 250px;
+    font-size: 1.8rem;
+}
+
+.item-3 {
+    background: #ff9640;
+    color: white;
+    padding: 10px;
+    border: 5px solid black;
+    margin: 10px;
+    height: 250px;
+}
+
+.item-4 {
+    background: #f5c096;
+    color: white;
+    padding: 10px;
+    border: 5px solid black;
+    margin: 10px;
+    width: 300px;
+    height: 300px;
+}
+
+.item-5 {
+    background: #d3c0b1;
+    color: white;
+    padding: 10px;
+    border: 5px solid black;
+    margin: 10px;
+    width: 350px;
+
+    flex-shrink: 0;
+    /* Step 2: Adding flex-basis to 200px
+        This will take precedence over defined width before flex-direction is row.
+     */
+    /*flex-basis: 200px;*/
+
+    /* Step 3: Adding flex-basis to auto
+        This will give precedence to width.
+     */
+    /*flex-basis: auto;*/
+
+    height: 300px;
+
+    /* Step 5: Since the flex-direction is column now i.e., flex-basis will take precedence
+        over the defined height */
+    flex-basis: 150px;
+
+    /* Step 6: flex-grow, flex-shrink, flex-basis shorthand   */
+    flex: 0 1 auto;
+}
+
+.item-6 {
+    background: #d3c0b1;
+    color: white;
+    padding: 10px;
+    border: 5px solid black;
+    margin: 10px;
+    width: 350px;
+    flex-shrink: 0;
+}
